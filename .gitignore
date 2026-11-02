@@ -1,0 +1,44 @@
+# --- Python / local environment ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Secrets (never commit) ---
+.env
+.env.*
+!.env.example
+
+# --- Local run caches (regenerable: LLM classifications + OCR output) ---
+code/.cache/
+.cache/
+
+# --- Raw agent traces (large, local session logs) ---
+agent-trace/
+
+# --- Built submission archives (re-create from source) ---
+code.zip
+agent-trace.zip
+
+# --- Kept local only, never published ---
+# Personal AI chat transcript (submitted separately as chat_transcript)
+log.txt
+# Organizer/harness instruction files used locally
+AGENTS.md
+CLAUDE.md
+agent_trace_instructions.md
+
+# Note: the deliverables output.csv, dataset/, and code/
+# are intentionally NOT ignored — they are part of the submission.
